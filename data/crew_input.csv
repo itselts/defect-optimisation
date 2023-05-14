@@ -1,0 +1,7 @@
+﻿truck_num,crew_type,shift_code,start_depot,end_depot,crew_type_ID,crew_num,shift,start_time,end_time
+1,BroadStateHaz,Day S_01,BroadSS_01,Mt. B_01,50d7a701-2456-405e-b3e4-367df26713ea,1,Day S_01,07:30:00,15:00:00
+2,WodoStateHaz,Day S_01,Wodon_01,Mothe_01,9e080037-7ada-4083-9fe7-dc7874404fde,1,Day S_01,07:30:00,15:00:00
+3,WangStateHaz,Day S_01,Wanga_01,Mt. H_01,4a00fc27-3bf1-42b8-8c78-22b39a03232b,1,Day S_01,07:30:00,15:00:00
+4,MansStateHaz,Day S_01,Mansf_01,Shepp_01,816cc0a9-ed8f-4f85-baad-02ae45517125,1,Day S_01,07:30:00,15:00:00
+5,ShepStateHaz,Day S_01,Shepp_01,Glen _01,b755657d-8c9d-4146-9165-93eed3320b9c,1,Day S_01,07:30:00,15:00:00
+6,ShepStateHaz,Day S_01,Shepp_01,Glen _01,b755657d-8c9d-4146-9165-93eed3320b9c,2,Day S_01,07:30:00,15:00:00
