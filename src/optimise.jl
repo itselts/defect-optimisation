@@ -5,10 +5,6 @@ using Pipe
 using Dates
 using Gurobi
 
-#using SCIP
-using Parquet
-using Dates
-
 
 ##### INPUT DATA ####
 sample_data = @pipe CSV.File("./data/sample_data.csv") |> DataFrame(_)
@@ -30,7 +26,7 @@ for (i,row) in enumerate(eachrow(sample_data))
     if row["EstDuration"] === nothing
         job_times[i] = 15
     else
-        
+       
         job_times[i] = row["EstDuration"]
     end
 end
@@ -176,7 +172,7 @@ end
 # (2) Vehicle leaving and returning
 for k in trucks
     @constraint(model, sum(X[0,j,k] for j in jobs) == sum(X[j,n+1,k] for j in jobs))
-    @constraint(model, sum(X[0,j,k] for j in jobs) <= 1)
+    @constraint(model, sum(X[0,j,k] for j in jobs) == 1)
 end
 
 # (3) Conservation of flow
@@ -229,8 +225,8 @@ end
 
 ##### Solving model #####
 SOLVER_GAP = 0.01
-TIME_LIMIT = 600
-NORELHEURTIME = 600
+TIME_LIMIT = 120
+NORELHEURTIME = TIME_LIMIT
 #set_optimizer_attribute(model, "MIPGap", SOLVER_GAP)
 set_optimizer_attribute(model, "TimeLimit", TIME_LIMIT)
 set_optimizer_attribute(model, "NoRelHeurTime", NORELHEURTIME)
@@ -241,14 +237,16 @@ optimize!(model)
 solution_summary(model)
 
 
-# Job completion times 
+# Job completion times
 times = Tables.table(value.(t.data[:]))
+CSV.write("./results/t.csv", times)
 
-CSV.write("./results/job_completion_times.csv", times)
-#CSV.write("./results/objective_gap.csv") Tables.table([primal_status(model), value.(obj), relative_gap(model), solve_time(model)])) # https://jump.dev/JuMP.jl/stable/moi/reference/models/#MathOptInterface.ResultStatusCode
+if !isdirpath("./results/X_matrices")
+    mkpath("results/X_matrices")
+end
 
 for k in trucks
-    path = string("./outputs/X_matrices/X", k, "_matrix.csv")
+    path = string("./results/X_matrices/X", k, "_matrix.csv")
     CSV.write(path, Tables.table(value.(X.data[:, :, k])))
 end
 
