@@ -6,7 +6,11 @@ A cost-constrained multi-depot vehicle routing model used to optimise work packa
 
 Model formulation is in docs. Formulation is then coded up and solved in Julia using Gurobi (License required). Post-processing and plotting done in Python. Not the cleanest of code as it was part of a much larger workflow. This is a focus on the mathematical model and solving, rather than operational usage.
 
+![alt text](https://github.com/big-thugga/defect-optimisation/blob/main/outputs/folium_plot.png)
 
+Solution on a blank canvas. Further geographic plot results in the outputs folder.
+
+![alt text](https://github.com/big-thugga/defect-optimisation/blob/main/outputs/results_plot.png)
 
 ## Model features
 - Maximise the job score (Score function, balanced by travel time and job time)
