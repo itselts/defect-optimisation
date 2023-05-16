@@ -21,9 +21,9 @@ The data used to create and test the model is from NEMA.
 ## How to run
 Download the repository. Environment requirements are all contained in requirements.txt for Python, and Manifest.toml/Project.toml for Julia.
 
-# Python steps
+### Python steps
 pip install -r requirements.txt
 
-# Julia steps
+### Julia steps
 ] activate .
 Pkg.instantiate()
