@@ -2,3 +2,5 @@ pandas
 numpy
 matplotlib
 folium
+openpyxl
+mpld3
