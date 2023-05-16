@@ -4,3 +4,4 @@ matplotlib
 folium
 openpyxl
 mpld3
+selenium

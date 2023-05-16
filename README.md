@@ -6,6 +6,8 @@ A cost-constrained multi-depot vehicle routing model used to optimise work packa
 
 Model formulation is in docs. Formulation is then coded up and solved in Julia using Gurobi (License required). Post-processing and plotting done in Python. Not the cleanest of code as it was part of a much larger workflow. This is a focus on the mathematical model and solving, rather than operational usage.
 
+
+
 ## Model features
 - Maximise the job score (Score function, balanced by travel time and job time)
 - Crew constraints
