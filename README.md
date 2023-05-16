@@ -1,5 +1,5 @@
 # Overview
-A cost-constrained multi-depot vehicle routing model. This is an advanced decision making tool that will determine what is the optimal choice of jobs to do, the allocation to which crew to do them, and how to traverse them, all the while satisfying complex constraints detailed in model features. That is, it makes three decisions simultaneously and optimally:
+A cost-constrained multi-depot vehicle routing model. This is an advanced decision making tool that will determine what is the optimal choice of jobs to do, the allocation of which crew to do them, and how to traverse them, all the while satisfying complex constraints detailed in model features. That is, it makes three decisions simultaneously and optimally:
 - what jobs to do 
 - who does them  
 - how to do them
