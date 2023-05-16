@@ -102,14 +102,15 @@ for fig in [1,2]:
 
 
 # Saving image to a html file
+fig1.savefig("../outputs/results_plot.png")
 html_str1 = mpld3.fig_to_html(fig1)
 Html_file1= open(f"../outputs/results_plot.html","w")
 Html_file1.write(html_str1)
 Html_file1.close()
 
-html_str2 = mpld3.fig_to_html(fig2)
-Html_file2= open(f"../outputs/results_plot_cleaned.html","w")
-Html_file2.write(html_str2)
-Html_file2.close()
+#html_str2 = mpld3.fig_to_html(fig2)
+#Html_file2= open(f"../outputs/results_plot_cleaned.html","w")
+#Html_file2.write(html_str2)
+#Html_file2.close()
 
 print("Diagnostic plot produced and saved to local results folder.")

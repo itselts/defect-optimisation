@@ -1,5 +1,7 @@
 import pandas as pd
 import folium
+import io
+from PIL import Image
 
 ##### DATA INPUT #####
 sample_data = pd.read_csv("../data/sample_data.csv")
@@ -20,3 +22,8 @@ for i, row in sample_data.iterrows():
     folium.CircleMarker(location=[sy, sx], color="#000000", radius=3, popup=f"Defect ID: {row['ItemIdentifier']}").add_to(map)
 
 map.save(f"../outputs/folium_plot.html")
+
+# Saving folium plot as png. (Requires selenium and mozilla firefox)
+#img_data = map._to_png(5)
+#img = Image.open(io.BytesIO(img_data))
+#img.save('../outputs/folium_plot.png')
