@@ -4,6 +4,8 @@ A cost-constrained multi-depot vehicle routing model for scheduling and routing 
 - who does them  
 - how to do them
 
+Automate workforce planning, reduce travel time and increase productivity all in one.
+
 **Thought experiment 1**: *Try manually determining just one of these decisions optimally. For example, given 15 jobs, what is the fastest way to traverse all of them with just 1 vehicle?*
 
 **Thought experiment 2**: *If we can't do all the jobs, is it better to attend to a cluster of low priority jobs close by, or travel further out to an urgent one?*
